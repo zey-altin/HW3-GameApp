@@ -13,7 +13,7 @@
 
   <li><strong>How to Use This Repository</strong>
     <ul>
-      <li> It's simple to use for Mac users. Just download the repository and open in XCode latest version (v15.3). If you are user of old version, may need to sync the project.</li>
+      <li> It's simple to use for Mac users. Just download the repository and open in XCode latest version (v15.3). If you are user of old version, may need to sync the project. And you nedd to add KingFisher package.</li>
     </ul>
   </li>
 
