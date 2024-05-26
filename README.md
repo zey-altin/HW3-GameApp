@@ -37,7 +37,7 @@
   </li>
 </ol>
 
-<a href="https://github.com/zey-altin/HW3-GameApp/assets/79727054/f6519828-9889-4eaf-9e3d-a58f91262f10"><img src="https://github.com/zey-altin/HW3-GameApp/assets/79727054/f6519828-9889-4eaf-9e3d-a58f91262f10" align="left" height="600" width="320" title="Home Page"></a>
-<a href="https://github.com/zey-altin/HW3-GameApp/assets/79727054/1728ae6e-8e5e-4de8-b414-fceae8f8fd0b"><img src="https://github.com/zey-altin/HW3-GameApp/assets/79727054/1728ae6e-8e5e-4de8-b414-fceae8f8fd0b" align="left" height="600" width="320" title="Home Page2"></a>
-<a href="https://github.com/zey-altin/HW3-GameApp/assets/79727054/b651e8e6-68e5-4295-92b6-b4868ede26f8"><img src="https://github.com/zey-altin/HW3-GameApp/assets/79727054/b651e8e6-68e5-4295-92b6-b4868ede26f8" align="left" height="600" width="320" title="Home Page3"></a>
+<a href="https://github.com/zey-altin/HW3-GameApp/assets/79727054/f6519828-9889-4eaf-9e3d-a58f91262f10"><img src="https://github.com/zey-altin/HW3-GameApp/assets/79727054/f6519828-9889-4eaf-9e3d-a58f91262f10" align="left" height="600" width="300" title="Home Page"></a>
+<a href="https://github.com/zey-altin/HW3-GameApp/assets/79727054/1728ae6e-8e5e-4de8-b414-fceae8f8fd0b"><img src="https://github.com/zey-altin/HW3-GameApp/assets/79727054/1728ae6e-8e5e-4de8-b414-fceae8f8fd0b" align="left" height="600" width="300" title="Home Page2"></a>
+<a href="https://github.com/zey-altin/HW3-GameApp/assets/79727054/b651e8e6-68e5-4295-92b6-b4868ede26f8"><img src="https://github.com/zey-altin/HW3-GameApp/assets/79727054/b651e8e6-68e5-4295-92b6-b4868ede26f8" align="left" height="600" width="300" title="Home Page3"></a>
 
