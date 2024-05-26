@@ -32,20 +32,6 @@ func ParsingJson(completion: @escaping ([Results]) ->()){
         }
         
         let decoder = JSONDecoder()
-        
-        decoder.dateDecodingStrategy = .custom { decoder -> Date in
-            let container = try decoder.singleValueContainer()
-            let dateString = try container.decode(String.self)
-                    
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd"
-            if let date = formatter.date(from: dateString) {
-                return date
-            } else {
-                throw DecodingError.dataCorruptedError(in: container, debugDescription: "Date string does not match expected format")
-            }
-        }
-        
         do {
             let parsingData = try decoder.decode(Games.self, from: jsonData)
             if let results = parsingData.results {

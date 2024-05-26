@@ -16,6 +16,8 @@
 		210056992BFB993C005D9232 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 210056982BFB993C005D9232 /* Base */; };
 		219A63552C032B8F003A7E20 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219A63542C032B8F003A7E20 /* Games.swift */; };
 		219A63582C0376C1003A7E20 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 219A63572C0376C1003A7E20 /* Kingfisher */; };
+		219A636A2C03C986003A7E20 /* gameListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219A63692C03C986003A7E20 /* gameListCell.xib */; };
+		219A636B2C03C986003A7E20 /* gameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219A63682C03C986003A7E20 /* gameListCell.swift */; };
 		21F5DD3B2C01F9FF00FCF4F8 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5DD3A2C01F9FF00FCF4F8 /* DetailPageViewController.swift */; };
 		21F5DD3D2C01FAE500FCF4F8 /* FavouritePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5DD3C2C01FAE500FCF4F8 /* FavouritePageViewController.swift */; };
 		21F5DD432C0204C500FCF4F8 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5DD422C0204C500FCF4F8 /* SliderCollectionViewCell.swift */; };
@@ -33,6 +35,8 @@
 		210056982BFB993C005D9232 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2100569A2BFB993C005D9232 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		219A63542C032B8F003A7E20 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		219A63682C03C986003A7E20 /* gameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameListCell.swift; sourceTree = "<group>"; };
+		219A63692C03C986003A7E20 /* gameListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gameListCell.xib; sourceTree = "<group>"; };
 		21F5DD3A2C01F9FF00FCF4F8 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		21F5DD3C2C01FAE500FCF4F8 /* FavouritePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePageViewController.swift; sourceTree = "<group>"; };
 		21F5DD422C0204C500FCF4F8 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -74,7 +78,6 @@
 				21F5DD392C01F59000FCF4F8 /* Model */,
 				21F5DD362C01F55600FCF4F8 /* Screens */,
 				21F5DD372C01F57700FCF4F8 /* ViewModel */,
-				21F5DD382C01F58400FCF4F8 /* Network */,
 				210056892BFB993B005D9232 /* AppDelegate.swift */,
 				2100568B2BFB993B005D9232 /* SceneDelegate.swift */,
 				2100568F2BFB993B005D9232 /* Main.storyboard */,
@@ -84,6 +87,15 @@
 				210056922BFB993B005D9232 /* HW3_GameApp.xcdatamodeld */,
 			);
 			path = HW3_GameApp;
+			sourceTree = "<group>";
+		};
+		219A63672C03C970003A7E20 /* gameListCell */ = {
+			isa = PBXGroup;
+			children = (
+				219A63682C03C986003A7E20 /* gameListCell.swift */,
+				219A63692C03C986003A7E20 /* gameListCell.xib */,
+			);
+			path = gameListCell;
 			sourceTree = "<group>";
 		};
 		21F5DD362C01F55600FCF4F8 /* Screens */ = {
@@ -99,6 +111,7 @@
 		21F5DD372C01F57700FCF4F8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				21F5DD382C01F58400FCF4F8 /* Network */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -122,17 +135,10 @@
 		21F5DD402C0203C800FCF4F8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				219A63672C03C970003A7E20 /* gameListCell */,
 				21F5DD442C0204CE00FCF4F8 /* SliderCell */,
-				21F5DD412C02040C00FCF4F8 /* GameListCell */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		21F5DD412C02040C00FCF4F8 /* GameListCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GameListCell;
 			sourceTree = "<group>";
 		};
 		21F5DD442C0204CE00FCF4F8 /* SliderCell */ = {
@@ -210,6 +216,7 @@
 				210056962BFB993C005D9232 /* Assets.xcassets in Resources */,
 				210056992BFB993C005D9232 /* Base in Resources */,
 				210056912BFB993B005D9232 /* Base in Resources */,
+				219A636A2C03C986003A7E20 /* gameListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +236,7 @@
 				21F5DD3D2C01FAE500FCF4F8 /* FavouritePageViewController.swift in Sources */,
 				2100568A2BFB993B005D9232 /* AppDelegate.swift in Sources */,
 				2100568C2BFB993B005D9232 /* SceneDelegate.swift in Sources */,
+				219A636B2C03C986003A7E20 /* gameListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

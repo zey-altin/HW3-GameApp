@@ -96,7 +96,7 @@
                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </collectionViewFlowLayout>
                                     <cells>
-                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="X0f-WI-iPz">
+                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gameCollectionViewCell" id="X0f-WI-iPz">
                                             <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DDp-5d-ouL">
@@ -133,6 +133,10 @@
                         <color key="badgeColor" name="AccentColor"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="GameListCollectionView" destination="3lh-SV-Ce7" id="dxB-uw-C30"/>
+                        <outlet property="GameListLabel" destination="fCZ-fa-qlO" id="yra-kQ-x65"/>
+                        <outlet property="GameListSearchBar" destination="ipd-2B-8nH" id="PRj-1U-EqP"/>
+                        <outlet property="GameListTableView" destination="ffy-dS-dNE" id="KV9-1M-0ju"/>
                         <outlet property="SliderCollectionView" destination="wJI-7s-oy9" id="qOe-Bt-i4i"/>
                         <outlet property="SliderPageControl" destination="YHn-dv-t4P" id="Aan-Ci-qiz"/>
                     </connections>

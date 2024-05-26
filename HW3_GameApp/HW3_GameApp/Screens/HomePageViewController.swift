@@ -9,10 +9,14 @@ import UIKit
 import Kingfisher
 
 class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+
+    @IBOutlet weak var GameListSearchBar: UISearchBar!
     @IBOutlet weak var SliderCollectionView: UICollectionView!
     @IBOutlet weak var SliderPageControl: UIPageControl!
-    
+    @IBOutlet weak var GameListLabel: UILabel!
+    @IBOutlet weak var GameListTableView: UITableView!
+    @IBOutlet weak var GameListCollectionView: UICollectionView!
+
     var games = [Results]()
     var imgArray = [String]()
     var timer : Timer?
@@ -20,8 +24,13 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GameListTableView.delegate = self
+        GameListTableView.dataSource = self
+        GameListCollectionView.delegate = self
+        GameListCollectionView.dataSource = self
         SliderCollectionView.delegate = self
         SliderCollectionView.dataSource = self
+        GameListTableView.register(UINib(nibName: gameListCell.identifier, bundle: nil), forCellReuseIdentifier: gameListCell.identifier)
         startTimer()
         
         ParsingJson { data in
@@ -31,20 +40,31 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
             DispatchQueue.main.async {
                 self.SliderPageControl.numberOfPages = self.imgArray.count
                 self.SliderCollectionView.reloadData()
+                self.GameListTableView.reloadData() 
             }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        imgArray.count
+        if collectionView == SliderCollectionView{
+            imgArray.count
+        } else {
+            1
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = SliderCollectionView.dequeueReusableCell(withReuseIdentifier: "sliderImageCell", for: indexPath) as! SliderCollectionViewCell
-        if let url = URL(string: imgArray[currentIndex]){
-            cell.SliderImageView.kf.setImage(with: url)
+        
+        if collectionView == SliderCollectionView{
+            let sliderCell = SliderCollectionView.dequeueReusableCell(withReuseIdentifier: "sliderImageCell", for: indexPath) as! SliderCollectionViewCell
+            if let url = URL(string: imgArray[currentIndex]){
+                sliderCell.SliderImageView.kf.setImage(with: url)
+            }
+            return sliderCell
+        } else {
+            let gameCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "gameCollectionViewCell", for: indexPath)
+            return gameCollectionViewCell
         }
-        return cell
     }
     
     //Timer for slider
@@ -76,5 +96,20 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         let sortedResults = results.sorted { $0.rating ?? 0 > $1.rating ?? 0 }
         return Array(sortedResults.prefix(3))
     }
+    
 }
 
+extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return games.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: gameListCell.identifier, for: indexPath) as? gameListCell else {
+                return UITableViewCell()
+        }
+        cell.configure(withModel: games[indexPath.row])
+        cell.contentView.backgroundColor = UIColor.yellow
+        return cell
+    }
+}

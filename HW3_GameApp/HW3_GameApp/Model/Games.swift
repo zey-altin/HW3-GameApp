@@ -14,7 +14,7 @@ struct Games: Decodable {
 struct Results : Decodable {
     let rating : Float?
     let name : String?
-    let released : Date?
+    let released : String?
     let backgroundImage : String?
     let platforms : [Platforms]?
     
