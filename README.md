@@ -24,7 +24,7 @@
       <li> Favourites Page must be created.</li>
       <li> Inter-page navigation must be provided.</li>
       <li> Searchbar must be activated.</li> 
-      <li> Tabbar can be redesigned.</li>>
+      <li> Tabbar can be redesigned.</li>
     </ul>
   </li>
 
